@@ -35,6 +35,19 @@ void LsqRegistration<PointTarget, PointSource>::setInitialLambdaFactor(double in
 }
 
 template <typename PointTarget, typename PointSource>
+void LsqRegistration<PointTarget, PointSource>::setMaxLsqIterations(int max_lsq_iterations) {
+  max_iterations_ = max_lsq_iterations;
+}
+
+
+template <typename PointTarget, typename PointSource>
+void LsqRegistration<PointTarget, PointSource>::setMaxLmIterations(int max_lm_iterations) {
+  lm_max_iterations_ = max_lm_iterations;
+}
+
+
+
+template <typename PointTarget, typename PointSource>
 void LsqRegistration<PointTarget, PointSource>::setDebugPrint(bool lm_debug_print) {
   lm_debug_print_ = lm_debug_print;
 }
