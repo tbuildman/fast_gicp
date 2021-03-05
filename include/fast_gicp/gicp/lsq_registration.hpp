@@ -43,7 +43,9 @@ public:
   void setRotationEpsilon(double eps);
   void setInitialLambdaFactor(double init_lambda_factor);
   void setDebugPrint(bool lm_debug_print);
-
+  void setMaxLsqIterations(int max_lsq_iterations);
+  void setMaxLmIterations(int max_lm_iterations) 
+  
   const Eigen::Matrix<double, 6, 6>& getFinalHessian() const;
 
   virtual void swapSourceAndTarget() {}
